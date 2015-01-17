@@ -2,22 +2,22 @@ require("./js/controllers.js");
 require("./js/directives.js");
 require("./js/services.js");
 
-window.Matsi = angular.module("Matsi", [
-  'matsi.controllers',
-  'matsi.services',
-  'matsi.directives',
+window.Myjobas = angular.module("Myjobas", [
+  'myjobas.controllers',
+  'myjobas.services',
+  'myjobas.directives',
   'ngAnimate', 
   'ngMaterial',
   'ui.router'
    ]);
 
-Matsi.run(['$rootScope', function($rootScope) {
+Myjobas.run(['$rootScope', function($rootScope) {
   // set globals we want available in ng expressions
   $rootScope._ = window._;
   $rootScope.moment = window.moment;
 }]);
 
-Matsi.config(['$stateProvider', '$urlRouterProvider','$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
+Myjobas.config(['$stateProvider', '$urlRouterProvider','$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $locationProvider.html5Mode(true);
   $stateProvider

@@ -32,7 +32,8 @@ public/lib/**/*.min.js
 public/lib/**/*.min.css
 public/lib/**/*.md
 public/lib/**/*.js
-
+.idea/
+public/
 public/js
 public/css
 public/pages

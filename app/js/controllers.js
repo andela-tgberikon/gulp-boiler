@@ -1,7 +1,6 @@
-angular.module("matsi.controllers", ['firebase','ngCookies'])
+angular.module("myjobas.controllers", ['firebase','ngCookies'])
 .controller('HomeController',['$scope','$mdSidenav','$location','$state','StuffService',
 	function($scope,$mdSidenav,$location,$state,StuffService){
-
 		console.log('#YEEt');
 		$scope.shittu = 'This is Shittu';
 		$scope.kenny = 'This is kenny';
@@ -16,4 +15,3 @@ angular.module("matsi.controllers", ['firebase','ngCookies'])
 .controller('SettingsController',['$scope','$state',function($scope,$state){
 
 }]);
-  

@@ -1,7 +1,8 @@
 header
   p
-    a(ng-hide="currentUser" ng-click="login('google')") login
-  div(ng-show="currentUser")
+    a(ng-if="!currentUser" ng-click="login('google')") login
+  div(ng-if="currentUser")
     p
       | {{ currentUser.email }}&nbsp;
+      img(src='{{ currentUser.picture}}')
       a(ng-click="logout()") sign out

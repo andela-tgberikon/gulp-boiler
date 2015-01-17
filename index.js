@@ -11,11 +11,11 @@ function run(appdir) {
 	app.use(function (req, res, next) {
 		// tell the client what firebase to use
 		if(process.env.NODE_ENV === 'production') {
-		  res.cookie('rootRef', "https://matsi1.firebaseio.com/");
+		  res.cookie('rootRef', "https://myjobas.firebaseio.com/");
 		}
 		else {
 			// development mode
-			res.cookie('rootRef', "https://brilliant-heat-9512.firebaseio.com/");
+			res.cookie('rootRef', "https://myjobas.firebaseio.com/");
 			// log the request
 		  console.log(t().format('HH:MM'), req['method'], req.url, req.socket.bytesRead);
 		}
@@ -35,7 +35,7 @@ function run(appdir) {
 	});
 
   // Fire up server
-	var server = app.listen(process.env.PORT || 5555, function() {
+	var server = app.listen(process.env.PORT || 9090, function() {
 	  console.log('Listening on port %d', server.address().port);
 	});
 }

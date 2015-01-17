@@ -1,4 +1,4 @@
-angular.module("matsi.directives", ['firebase','ngCookies'])
+angular.module("myjobas.directives", ['firebase','ngCookies'])
   .directive('header', function() {
     return {
       restrict: 'E',
@@ -24,19 +24,19 @@ angular.module("matsi.directives", ['firebase','ngCookies'])
                 user.created = Firebase.ServerValue.TIMESTAMP;
                 userRef.set(user);
                 welcomeRef.child(user.uid).set(user);
-                analytics.track('Signup');
+                //analytics.track('Signup');
               }
             });
 
             // indicate to the rest of the app that we're logged in
             $rootScope.currentUser = user;
 
-            analytics.identify(user.uid, {
-              name: user.name,
-              firstName: user.firstName,
-              lastName: user.lastName,
-              email: user.email
-            });
+            //analytics.identify(user.uid, {
+            //  name: user.name,
+            //  firstName: user.firstName,
+            //  lastName: user.lastName,
+            //  email: user.email
+            //});
           }
           else {
             // user is logged out
@@ -46,7 +46,7 @@ angular.module("matsi.directives", ['firebase','ngCookies'])
         });
 
         $scope.login = function() {
-          analytics.track('Login');
+          //analytics.track('Login');
           options = { remember: true, scope: "email" };
           rootRef.authWithOAuthRedirect("google", function(err, authData) {
             if(err) {

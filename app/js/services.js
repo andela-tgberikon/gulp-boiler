@@ -1,10 +1,9 @@
-angular.module("matsi.services", ['firebase','ngCookies'])
+angular.module("myjobas.services", ['firebase','ngCookies'])
 
-.factory('StuffService',['$firebase','$cookies',function($firebase,$cookies){
+.factory('StuffService', ['$firebase','$cookies',function($firebase, $cookies){
 	var rootRef = new Firebase($cookies.rootRef);
 	console.log($cookies);
 	return {
-
 		create:function(stuff){
 			rootRef.child('stuff').push(stuff);
 		},
